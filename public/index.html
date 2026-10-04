@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Grocery Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🛒 Cloud Grocery</div>
+
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#products">Products</a>
+        <a href="#add">Add Product</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero">
+        <h1>Cloud-Based Grocery Management System</h1>
+        <p>Manage grocery products, inventory and stock efficiently.</p>
+    </section>
+
+    <section id="dashboard" class="dashboard">
+
+        <div class="card">
+            <h3>Total Products</h3>
+            <p id="totalProducts">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Stock</h3>
+            <p id="totalStock">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Inventory Value</h3>
+            <p id="inventoryValue">₹0</p>
+        </div>
+
+    </section>
+
+    <section id="add" class="form-section">
+
+        <h2>Add Grocery Product</h2>
+
+        <form id="productForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Product Name"
+                required
+            >
+
+            <select id="category" required>
+                <option value="">Select Category</option>
+                <option value="Grains">Grains</option>
+                <option value="Vegetables">Vegetables</option>
+                <option value="Fruits">Fruits</option>
+                <option value="Dairy">Dairy</option>
+                <option value="Beverages">Beverages</option>
+                <option value="Snacks">Snacks</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <input
+                type="number"
+                id="price"
+                placeholder="Price"
+                min="1"
+                required
+            >
+
+            <input
+                type="number"
+                id="quantity"
+                placeholder="Quantity"
+                min="0"
+                required
+            >
+
+            <button type="submit">Add Product</button>
+
+        </form>
+
+    </section>
+
+    <section id="products" class="products-section">
+
+        <div class="section-header">
+            <h2>Product Inventory</h2>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search products..."
+            >
+        </div>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="productList"></tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Cloud Grocery Management System</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
